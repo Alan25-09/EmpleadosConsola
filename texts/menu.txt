@@ -1,0 +1,6 @@
+1.Filtrar por salario y puesto en especifico.
+2.Agrupar por puesto y mostrar salario promedio.
+3.Buscar empleados cuyo nombre tenga una subcadena
+4.Seleccionar empleados ordenador por puesto y salario.
+5.Regresar
+6.Salir

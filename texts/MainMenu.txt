@@ -1,0 +1,29 @@
+------Menu de empleados------
+    
+    >1-Listar todos
+    
+    >2-Filtrar por salario
+    
+    >3-Filtrar por puesto
+    
+    >4-Buscar por nombre
+    
+    >5-Calcular promedios (opcional)
+    
+    >6-Mostrar empleados por puestos 
+    
+    >7-Ordenar por nombre
+    
+    >8-Ordenar por salario
+    
+    >9-Ordenar por nombre y salario
+    
+    >10-Seleccionar todos los nombres y apellidos
+    
+    >11- Sumar todos los salarios
+    
+    >12-Opciones combinadas linQ
+
+    >13-Mostrar empleados y departamentos
+    
+    >14-Salir
