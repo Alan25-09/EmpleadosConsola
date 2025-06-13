@@ -3,137 +3,117 @@ using Models.Empleado;
 using MenuLinQ;
 using Controller.Utils;
 using Microsoft.Extensions.Configuration;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.VisualBasic;
 // ...otros using...
 class Program
 {
     static void Main(string[] args)
     {
-        UtilsController utils = new UtilsController();
-        int opcion;
+        double Opcion = 0;
+        UtilsController Utils = new UtilsController();
         do
         {
-            var empleados = ControllerEmpleado.empleadosController.ObtenerEmpleados();
-            var Rutas = utils.ObtenerRutas();
+            #region Obtención de rutas
+
+            var empleados = EmpleadosController.ObtenerEmpleados(); //Se puede obtener de una bd
+            var Rutas = Utils.ObtenerRutas();
             string? rutaMainMenu = Rutas["MainMenu"];
-            if (string.IsNullOrEmpty(rutaMainMenu))
-            {
-                Console.WriteLine("Ruta nula o vacia");
-                return;
-            }
-            var RutaMainMenu = Path.Combine(Directory.GetCurrentDirectory() ,rutaMainMenu);
-            utils.ImprimirTxt(RutaMainMenu);
+            var rutaMain = Utils.EvaluarDato(rutaMainMenu).ValorString;
+            var RutaMainMenu = Path.Combine(Directory.GetCurrentDirectory(), rutaMain);
+            #endregion
+            #region Comienzo de menu
+            Utils.ImprimirTxt(RutaMainMenu);
             Console.Write("Opcion:");
             string? entrada = Console.ReadLine();
-            if (!int.TryParse(entrada, out opcion))
-            {
-                Console.WriteLine("Por favor, ingresa una opción válida.");
-                return;
-            }
-
+            Opcion = Utils.EvaluarDato(entrada).ValorDouble;
+            //Tal vez una función con mensajes y un return?
+            #endregion
             //Switch para las opciones
-            switch (opcion)
+            if (Opcion == 0)
+            {
+                Utils.MostrarMensaje(4); // "Por favor ingrese una opción valida"
+                Utils.FinMenu();
+                continue;
+            }
+            switch (Opcion)
             {
                 case 1:
-                    ControllerEmpleado.empleadosController.ListarTodo(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.ListarTodo(empleados);
                     break;
                 case 2:
-                    Console.WriteLine("\nIngrese la cantidad a filtrar:");
+                    Console.Write("\nIngrese la cantidad:");
                     string? entradaSalario = Console.ReadLine();
-                    double salario;
-                    if (!double.TryParse(entradaSalario, out salario))
-                    {
-                        Console.WriteLine("Ingrese un monto valido");
-                        return;
-                    }
-                    ControllerEmpleado.empleadosController.FltrarXSalario(empleados, salario);
-                    utils.FinMenu();
+                    var salario = Utils.EvaluarDato(entradaSalario).ValorDouble;
+                    EmpleadosController.FltrarXSalario(empleados, salario);
                     break;
                 case 3:
-                    Console.WriteLine("\nIngrese el puesto el cual filtrara la lista:");
-                    string? entradaPuesto = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(entradaPuesto))
-                    {
-                        Console.WriteLine("Debe ingresar un puesto válido.");
-                        return;
-                    }
-                    ControllerEmpleado.empleadosController.FiltrarXPuesto(empleados, entradaPuesto);
-                    utils.FinMenu();
+                    Console.Write("\nIngrese el puesto:");
+                    string? puesto = Console.ReadLine();
+                    var Puesto = Utils.EvaluarDato(puesto).ValorString;
+                    EmpleadosController.FiltrarXPuesto(empleados, Puesto);
                     break;
 
                 case 4:
-                    Console.WriteLine("\nIngrese el nombre del empleado que desea buscar:");
-                    string? NombreEmpleado = Console.ReadLine();
-                    if (string.IsNullOrWhiteSpace(NombreEmpleado))
-                    {
-                        Console.WriteLine("Ingrese un nombre valido");
-                        return;
-                    }
-                    ControllerEmpleado.empleadosController.FiltrarXNombre(empleados, NombreEmpleado);
-                    utils.FinMenu();
+                    Console.Write("\nIngrese el nombre del empleado que desea buscar:");
+                    string? nombreEmpleado = Console.ReadLine();
+                    var NombreEmpleado = Utils.EvaluarDato(nombreEmpleado).ValorString;
+                    EmpleadosController.FiltrarXNombre(empleados, NombreEmpleado);
                     break;
 
                 case 5:
-                    ControllerEmpleado.empleadosController.CalcularPromedios(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.CalcularPromedios(empleados);
                     break;
 
                 case 6:
-                    ControllerEmpleado.empleadosController.MostrarGruposXPuesto(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.MostrarGruposXPuesto(empleados);
                     break;
 
                 case 7:
-                    var OrdenarXNombre = ControllerEmpleado.empleadosController.OrdenarXNombre(empleados);
-                    empleadosController.ImprimirEmpleadosxLista(OrdenarXNombre);
-                    utils.FinMenu();
+                    var OrdenarXNombre = EmpleadosController.OrdenarXNombre(empleados);
+                    EmpleadosController.ImprimirEmpleadosxLista(OrdenarXNombre);
                     break;
 
                 case 8:
-                    var OrdenarXSalario = ControllerEmpleado.empleadosController.OrdenarXSalario(empleados);
-                    empleadosController.ImprimirEmpleadosxLista(OrdenarXSalario);
-                    utils.FinMenu();
+                    var OrdenarXSalario = EmpleadosController.OrdenarXSalario(empleados);
+                    EmpleadosController.ImprimirEmpleadosxLista(OrdenarXSalario);
                     break;
 
                 case 9:
-                    var OrdenarXN = ControllerEmpleado.empleadosController.OrdenarXNombreYSalario(empleados);
-                    empleadosController.ImprimirEmpleadosxLista(OrdenarXN);
-                    utils.FinMenu();
+                    var OrdenarXN = EmpleadosController.OrdenarXNombreYSalario(empleados);
+                    EmpleadosController.ImprimirEmpleadosxLista(OrdenarXN);
                     break;
                 //Casos por modificar
                 case 10:
-                    empleadosController.SeleccionarNombreYApellido(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.SeleccionarNombreYApellido(empleados);
                     break;
                 case 11:
-                    empleadosController.SumarTodoSalarios(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.SumarTodoSalarios(empleados);
                     break;
                 //opciones combinadas de linQ
                 case 12:
-                    utils.FinMenu(tiempo: 2000);
+                    Utils.FinMenu(tiempo: 2000);
                     //LinQController.Menu();
                     LinQController.AnalizarOpcion(empleados);
-                    utils.FinMenu();
                     break;
                 //Salida del programa
                 case 13:
-                    var departamentos= empleadosController.ObtenerDepartamento();
-                    empleadosController.UnirEmpleadosYDepartamentos(empleados, departamentos);
-                    utils.FinMenu();
+                    var departamentos = EmpleadosController.ObtenerDepartamento();
+                    EmpleadosController.UnirEmpleadosYDepartamentos(empleados, departamentos);
                     break;
 
                 case 14:
                     Console.WriteLine("Saliendo del programa....");
-                    utils.FinMenu(tiempo: 3000);
+                    Utils.FinMenu(tiempo: 3000);
                     break;
 
                 default:
-                    Console.WriteLine("Ingrese una opción valida");
-                    utils.FinMenu();
+                    Utils.MostrarMensaje(4);
                     break;
             }
+            Utils.FinMenu();
+
         }
-        while (opcion != 14);
+        while (Opcion != 14);
     }
 }

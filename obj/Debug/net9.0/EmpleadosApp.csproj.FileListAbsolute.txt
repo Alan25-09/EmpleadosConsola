@@ -23,3 +23,29 @@
 /home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/obj/Debug/net9.0/EmpleadosApp.csproj.AssemblyReference.cache
 /home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/obj/Debug/net9.0/Empleado.4E106378.Up2Date
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\appsettings.json
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\EmpleadosApp.exe
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\EmpleadosApp.deps.json
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\EmpleadosApp.runtimeconfig.json
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\EmpleadosApp.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\EmpleadosApp.pdb
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\documentos\Practica C#\EmpleadosConsola\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.csproj.AssemblyReference.cache
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.AssemblyInfoInputs.cache
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.AssemblyInfo.cs
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.csproj.CoreCompileInputs.cache
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.sourcelink.json
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\Empleado.4E106378.Up2Date
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.dll
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\refint\EmpleadosApp.dll
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.pdb
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\EmpleadosApp.genruntimeconfig.cache
+E:\documentos\Practica C#\EmpleadosConsola\obj\Debug\net9.0\ref\EmpleadosApp.dll

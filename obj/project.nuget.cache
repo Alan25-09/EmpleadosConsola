@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "7zrTR/iZJ4Q=",
+  "dgSpecHash": "C/J911loR9o=",
   "success": true,
-  "projectFilePath": "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/EmpleadosApp.csproj",
+  "projectFilePath": "E:\\documentos\\Practica C#\\EmpleadosConsola\\EmpleadosApp.csproj",
   "expectedPackageFiles": [
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.configuration/9.0.5/microsoft.extensions.configuration.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.5/microsoft.extensions.configuration.abstractions.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.configuration.fileextensions/9.0.5/microsoft.extensions.configuration.fileextensions.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.configuration.json/9.0.5/microsoft.extensions.configuration.json.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.fileproviders.abstractions/9.0.5/microsoft.extensions.fileproviders.abstractions.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.fileproviders.physical/9.0.5/microsoft.extensions.fileproviders.physical.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.filesystemglobbing/9.0.5/microsoft.extensions.filesystemglobbing.9.0.5.nupkg.sha512",
-    "/home/alan-flores/.nuget/packages/microsoft.extensions.primitives/9.0.5/microsoft.extensions.primitives.9.0.5.nupkg.sha512"
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.5\\microsoft.extensions.configuration.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.5\\microsoft.extensions.configuration.abstractions.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\9.0.5\\microsoft.extensions.configuration.fileextensions.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.configuration.json\\9.0.5\\microsoft.extensions.configuration.json.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.5\\microsoft.extensions.fileproviders.abstractions.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\9.0.5\\microsoft.extensions.fileproviders.physical.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\9.0.5\\microsoft.extensions.filesystemglobbing.9.0.5.nupkg.sha512",
+    "C:\\Users\\AlanJ\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512"
   ],
   "logs": []
 }

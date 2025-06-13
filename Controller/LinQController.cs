@@ -7,11 +7,11 @@ namespace MenuLinQ;
 
 public class LinQController
 {
-    private static UtilsController utils = new UtilsController();
+    private static UtilsController Utils = new UtilsController();
 
     public static void Menu()
     {
-        var rutas = utils.ObtenerRutas();
+        var rutas = Utils.ObtenerRutas();
         string? rutaMenu = rutas["SecondMenu"];
         if (string.IsNullOrEmpty(rutaMenu))
         {
@@ -19,21 +19,24 @@ public class LinQController
             return;
         }
         string? RutaMenu = Path.Combine(Directory.GetCurrentDirectory(), rutaMenu);
-        utils.ImprimirTxt(RutaMenu);
+        Utils.ImprimirTxt(RutaMenu);
     }
     public static void AnalizarOpcion( List<Empleado> empleados)
     {
+        double Opcion=0;
         do
         {
             Menu();
             Console.Write("opcion: ");
             string? entrada = Console.ReadLine();
-            int opcion;
-            if (!int.TryParse(entrada, out opcion))
+            Opcion = Utils.EvaluarDato(entrada).ValorDouble;
+                if (Opcion == 0)
             {
-                Console.WriteLine("Seleccione una opción valida, no puede ser nula");
+                Utils.MostrarMensaje(4); // "Por favor ingrese una opción valida"
+                Utils.FinMenu();
+                continue;
             }
-            switch (opcion)
+            switch ((int)Opcion)
             {
                 case 1:
                     Console.WriteLine("Ingrese el salario y el puesto");
@@ -52,12 +55,12 @@ public class LinQController
                         Console.WriteLine("El puesto no puede ser nulo");
                         return;
                     }
-                    empleadosController.FiltrarPorSalarioYPuesto(empleados, salario, puesto);
-                    utils.FinMenu();
+                    EmpleadosController.FiltrarPorSalarioYPuesto(empleados, salario, puesto);
+                    Utils.FinMenu();
                     break;
                 case 2:
-                    empleadosController.AgruparPorPuestoYMostrarSalario(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.AgruparPorPuestoYMostrarSalario(empleados);
+                    Utils.FinMenu();
                     break;
                 case 3:
                     Console.Write("Ingrese la subcadena");
@@ -67,12 +70,12 @@ public class LinQController
                         Console.WriteLine("No se admiten valores nulos");
                         return;
                     }
-                    empleadosController.BuscarPorSubcadena(empleados, subcadena);
-                    utils.FinMenu();
+                    EmpleadosController.BuscarPorSubcadena(empleados, subcadena);
+                    Utils.FinMenu();
                     break;
                 case 4:
-                    empleadosController.SeleccionarPorPuestoYPorSalario(empleados);
-                    utils.FinMenu();
+                    EmpleadosController.SeleccionarPorPuestoYPorSalario(empleados);
+                    Utils.FinMenu();
                     break;
                 case 5:
                     return;
@@ -84,7 +87,7 @@ public class LinQController
                 default:
                     break;
             }
-            } while (true);
+        } while (Opcion!=6);
 
     }
 }

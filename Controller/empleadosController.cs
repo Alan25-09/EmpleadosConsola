@@ -3,7 +3,7 @@ using Models.Empleado;
 
 namespace ControllerEmpleado
 {
-    public class empleadosController
+    public class EmpleadosController
     {
         public static List<Departamento> ObtenerDepartamento()
         {
@@ -49,7 +49,7 @@ namespace ControllerEmpleado
         }
 
         //Filtrar por puesto
-        public static void FiltrarXPuesto(List<Empleado> empleados, string puesto)
+        public static void FiltrarXPuesto(List<Empleado> empleados, string? puesto)
         {
             var EmpleadosXPuesto = empleados.Where(q => q.Puesto == puesto).ToList();
             ImprimirEmpleadosxLista(EmpleadosXPuesto);
@@ -140,7 +140,7 @@ namespace ControllerEmpleado
         public static void FiltrarPorSalarioYPuesto(List<Empleado> empleados, double salario, string puesto)
         {
             var listaFiltrada = empleados.Where(q => q.Salario > salario && q.Puesto.ToLower() == puesto.ToLower()).OrderByDescending(q => q.Nombre).ToList();
-            empleadosController.ImprimirEmpleadosxLista(listaFiltrada);
+            ImprimirEmpleadosxLista(listaFiltrada);
         }
 
         public static void AgruparPorPuestoYMostrarSalario(List<Empleado> empleados)

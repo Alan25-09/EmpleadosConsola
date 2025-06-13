@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/EmpleadosApp.csproj": {}
+    "E:\\documentos\\Practica C#\\EmpleadosConsola\\EmpleadosApp.csproj": {}
   },
   "projects": {
-    "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/EmpleadosApp.csproj": {
+    "E:\\documentos\\Practica C#\\EmpleadosConsola\\EmpleadosApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/EmpleadosApp.csproj",
+        "projectUniqueName": "E:\\documentos\\Practica C#\\EmpleadosConsola\\EmpleadosApp.csproj",
         "projectName": "EmpleadosApp",
-        "projectPath": "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/EmpleadosApp.csproj",
-        "packagesPath": "/home/alan-flores/.nuget/packages/",
-        "outputPath": "/home/alan-flores/Escritorio/Practica/EjemploEmpleados/EmpleadosApp/obj/",
+        "projectPath": "E:\\documentos\\Practica C#\\EmpleadosConsola\\EmpleadosApp.csproj",
+        "packagesPath": "C:\\Users\\AlanJ\\.nuget\\packages\\",
+        "outputPath": "E:\\documentos\\Practica C#\\EmpleadosConsola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alan-flores/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\AlanJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -70,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.106/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "D:\\Archivos de Programa\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
